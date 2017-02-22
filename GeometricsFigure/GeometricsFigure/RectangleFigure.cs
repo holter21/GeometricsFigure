@@ -51,7 +51,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if ( _height <= 0 )
+                if ( value <= 0 )
                 {
                     throw new ArgumentException("Некорректная высота прямоугольника");
                 }
@@ -71,7 +71,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if ( _width <= 0 )
+                if ( value <= 0 )
                 {
                     throw new ArgumentException("Неккоректная ширина прямоугольника");
                 }
@@ -102,11 +102,11 @@ namespace GeometricsFigure
         /// <returns>Площадь прямоугольника.</returns>
         public double GetArea()
         {
-            if ( _height == 0 || _width == 0 )
+            if ( Height == 0 || Width == 0 )
             {
                 throw new ArgumentException("Прямоугольник не инициализирован значениями");
             }
-            return _height * _width;
+            return Height * Width;
         }
 
         /// <summary>
@@ -115,11 +115,11 @@ namespace GeometricsFigure
         /// <returns>Периметр прямоугольника.</returns>
         public double GetPerimeter()
         {
-            if ( _height == 0 || _width == 0 )
+            if ( Height == 0 || Width == 0 )
             {
                 throw new ArgumentException("Прямоугольник не инициализирован значениями");
             }
-            return (_height + _width) * 2;
+            return (Height + Width) * 2;
         }
 
         #endregion

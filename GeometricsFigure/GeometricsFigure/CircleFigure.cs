@@ -47,7 +47,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if ( _radius <= 0 )
+                if ( value <= 0 )
                 {
                     throw new ArgumentException("Неккоректный радиус окружности");
                 }
@@ -83,7 +83,7 @@ namespace GeometricsFigure
             {
                 throw new ArgumentException("Окружность не инициализирована значениями");
             }
-            return Math.PI * _radius * _radius;
+            return Math.PI * Radius * Radius;
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace GeometricsFigure
             {
                 throw new ArgumentException("Окружность не инициализирована значениями");
             }
-            return 2 * Math.PI * _radius;
+            return 2 * Math.PI * Radius;
         }
 
         #endregion
