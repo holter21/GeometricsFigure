@@ -49,7 +49,7 @@ namespace GeometricsFigure
             {
                 if ( value <= 0 )
                 {
-                    throw new ArgumentException("Неккоректный радиус окружности");
+                    throw new ArgumentException("Некорректный радиус окружности");
                 }
                 _radius = value;
             }

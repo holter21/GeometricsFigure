@@ -73,7 +73,7 @@ namespace GeometricsFigure
             {
                 if ( value <= 0 )
                 {
-                    throw new ArgumentException("Неккоректная ширина прямоугольника");
+                    throw new ArgumentException("Некорректная ширина прямоугольника");
                 }
                 _width = value;
             }

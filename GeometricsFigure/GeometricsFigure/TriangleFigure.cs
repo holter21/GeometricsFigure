@@ -13,9 +13,9 @@ namespace GeometricsFigure
     public class TriangleFigure:IFigure
     {
         private Point _startPoint;
-        private double _sidea;
-        private double _sideb;
-        private double _sidec;
+        private double _sideA;
+        private double _sideB;
+        private double _sideC;
 
         /// <summary>
         /// Конструктор треугольника.
@@ -24,9 +24,9 @@ namespace GeometricsFigure
         {
             _startPoint.X = 0;
             _startPoint.Y = 0;
-            _sidea = 0;
-            _sideb = 0;
-            _sidec = 0;
+            _sideA = 0;
+            _sideB = 0;
+            _sideC = 0;
         }
 
         /// <summary>
@@ -51,15 +51,15 @@ namespace GeometricsFigure
         {
             get
             {
-                return _sidea;
+                return _sideA;
             }
             set
             {
                 if ( value <= 0 )
                 {
-                    throw new ArgumentException("Неккоректная сторона треугольника");
+                    throw new ArgumentException("Некорректная сторона треугольника");
                 }
-                _sidea = value;
+                _sideA = value;
             }
         }
 
@@ -70,15 +70,15 @@ namespace GeometricsFigure
         {
             get
             {
-                return _sideb;
+                return _sideB;
             }
             set
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentException("Неккоректная сторона треугольника");
+                    throw new ArgumentException("Некорректная сторона треугольника");
                 }
-                _sideb = value;
+                _sideB = value;
             }
         }
 
@@ -89,15 +89,15 @@ namespace GeometricsFigure
         {
             get
             {
-                return _sidec;
+                return _sideC;
             }
             set
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentException("Неккоректная сторона треугольника");
+                    throw new ArgumentException("Некорректная сторона треугольника");
                 }
-                _sidec = value;
+                _sideC = value;
             }
         }
 
@@ -124,6 +124,10 @@ namespace GeometricsFigure
         /// <returns>Площадь треугольника.</returns>
         public double GetArea()
         {
+            if (SideA == 0 || SideB == 0 || SideC ==0)
+            {
+                throw new ArgumentException("Треугольник не инициализирован значениями");
+            }
             return
                     Math.Sqrt(GetSemiPerimetr() * ((GetSemiPerimetr() - SideA)) * (GetSemiPerimetr() - SideB)
                               * (GetSemiPerimetr() - SideC));
@@ -135,6 +139,10 @@ namespace GeometricsFigure
         /// <returns>Периметр треугольника.</returns>
         public double GetPerimeter()
         {
+            if (SideA == 0 || SideB == 0 || SideC == 0)
+            {
+                throw new ArgumentException("Треугольник не инициализирован значениями");
+            }
             return (SideA + SideB + SideC);
         }
 
@@ -146,6 +154,10 @@ namespace GeometricsFigure
         /// <returns>Полупериметр треугольника</returns>
         public double GetSemiPerimetr()
         {
+            if (SideA == 0 || SideB == 0 || SideC == 0)
+            {
+                throw new ArgumentException("Треугольник не инициализирован значениями");
+            }
             return (SideA + SideB + SideC) / 2;
         }
     }
