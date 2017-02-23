@@ -146,6 +146,15 @@ namespace GeometricsFigure
             return (SideA + SideB + SideC);
         }
 
+        /// <summary>
+        /// Получение типа фигуры
+        /// </summary>
+        /// <returns>Тип фигуры</returns>
+        public string GetType()
+        {
+            return "Треугольник";
+        }
+
         #endregion
 
         /// <summary>

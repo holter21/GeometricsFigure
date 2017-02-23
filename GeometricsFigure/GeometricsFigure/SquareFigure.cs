@@ -98,6 +98,15 @@ namespace GeometricsFigure
             return 4 * SideA;
         }
 
+        /// <summary>
+        /// Получение типа фигуры
+        /// </summary>
+        /// <returns>Тип фигуры</returns>
+        public string GetType()
+        {
+            return "Квадрат";
+        }
+
         #endregion
     }
 }

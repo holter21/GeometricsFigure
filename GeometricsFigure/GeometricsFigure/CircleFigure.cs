@@ -99,6 +99,15 @@ namespace GeometricsFigure
             return 2 * Math.PI * Radius;
         }
 
+        /// <summary>
+        /// Получение типа фигуры
+        /// </summary>
+        /// <returns>Тип фигуры</returns>
+        public string GetType()
+        {
+            return "Окружность";
+        }
+
         #endregion
     }
 }

@@ -190,6 +190,15 @@ namespace GeometricsFigure
             return SideA + SideB + SideC + SideD;
         }
 
+        /// <summary>
+        /// Получение типа фигуры
+        /// </summary>
+        /// <returns>Тип фигуры</returns>
+        public string GetType()
+        {
+            return "Трапеция";
+        }
+
         #endregion
     }
 }

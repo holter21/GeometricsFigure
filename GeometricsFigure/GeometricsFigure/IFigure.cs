@@ -23,5 +23,11 @@ namespace GeometricsFigure
         /// </summary>
         /// <returns>Периметр фигуры.</returns>
         double GetPerimeter();
+
+        /// <summary>
+        /// Получение типа фигуры
+        /// </summary>
+        /// <returns>Тип фигуры</returns>
+        string GetType();
     }
 }

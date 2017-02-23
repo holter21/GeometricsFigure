@@ -122,6 +122,15 @@ namespace GeometricsFigure
             return (Height + Width) * 2;
         }
 
+        /// <summary>
+        /// Получение типа фигуры
+        /// </summary>
+        /// <returns>Тип фигуры</returns>
+        public string GetType()
+        {
+            return "Прямоугольник";
+        }
+
         #endregion
     }
 }
