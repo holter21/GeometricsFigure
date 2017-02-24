@@ -12,8 +12,6 @@ namespace GeometricsFigure
     /// </summary>
     public class TriangleFigure:IFigure
     {
-        //TODO: Добавить проверку условия Треугольник существует только тогда, когда сумма любых двух его сторон больше третьей.
-        //Нельзя задать координаты по отдельности, из-за условия выше
         private Point _startPoint;
         private double _sideA;
         private double _sideB;
