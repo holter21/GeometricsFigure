@@ -12,6 +12,8 @@ namespace GeometricsFigure
     /// </summary>
     public class TrapezeFigure:IFigure
     {
+        //TODO: Сделать проверку фигуры на трапецию, 2 основные стороны должны быть параллельны
+        //TODO: Нельзя присваивать стороны отдельно, нужно сделать присвоение сторон одновременно, из за условия выше
         private Point _startPoint;
         private double _sideA;
         private double _sideB;
@@ -128,6 +130,7 @@ namespace GeometricsFigure
             }
         }
 
+        //TODO: Это поле можно вычислить 
         /// <summary>
         /// Высота трапеции.
         /// </summary>
