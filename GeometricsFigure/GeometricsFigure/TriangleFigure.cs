@@ -41,15 +41,13 @@ namespace GeometricsFigure
         public TriangleFigure(Point startPoint, double a, double b, double c)
         {
             StartPoint = startPoint;
-            SideA = a;
-            SideB = b;
-            SideC = c;
+            SetSides(a, b, c);
         }
 
         /// <summary>
         /// Сторона А
         /// </summary>
-        public double SideA
+        private double SideA
         {
             get
             {
@@ -68,7 +66,7 @@ namespace GeometricsFigure
         /// <summary>
         /// Сторона В
         /// </summary>
-        public double SideB
+        private double SideB
         {
             get
             {
@@ -87,7 +85,7 @@ namespace GeometricsFigure
         /// <summary>
         /// Сторона С
         /// </summary>
-        public double SideC
+        private double SideC
         {
             get
             {
@@ -101,6 +99,39 @@ namespace GeometricsFigure
                 }
                 _sideC = value;
             }
+        }
+
+        /// <summary>
+        /// Функция проверки сторон треугольника.
+        /// </summary>
+        /// <param name="a">Сторона А</param>
+        /// <param name="b">Сторона В</param>
+        /// <param name="c">Сторона С</param>
+        public void SetSides(double a, double b, double c)
+        {
+            if ((a + c) < b || (b + c) < a || (a + b) < c)
+            {
+                throw new ArgumentException("Неверно введены стороны треугольника");
+            }
+            else
+            {
+                SideA = a;
+                SideB = b;
+                SideC = c; 
+            }
+        }
+
+        /// <summary>
+        /// Получение полупериметра треугольника
+        /// </summary>
+        /// <returns>Полупериметр треугольника</returns>
+        public double GetSemiPerimetr()
+        {
+            if (SideA == 0 || SideB == 0 || SideC == 0)
+            {
+                throw new ArgumentException("Треугольник не инициализирован значениями");
+            }
+            return (SideA + SideB + SideC) / 2;
         }
 
         #region Implementation of IFigure
@@ -130,9 +161,9 @@ namespace GeometricsFigure
             {
                 throw new ArgumentException("Треугольник не инициализирован значениями");
             }
+            var tmp = GetSemiPerimetr() * ((GetSemiPerimetr() - SideA)) * (GetSemiPerimetr() - SideB) * (GetSemiPerimetr() - SideC);
             return
-                    Math.Sqrt(GetSemiPerimetr() * ((GetSemiPerimetr() - SideA)) * (GetSemiPerimetr() - SideB)
-                              * (GetSemiPerimetr() - SideC));
+                    Math.Sqrt(tmp);
         }
 
         /// <summary>
@@ -159,17 +190,5 @@ namespace GeometricsFigure
 
         #endregion
 
-        /// <summary>
-        /// Получение полупериметра треугольника
-        /// </summary>
-        /// <returns>Полупериметр треугольника</returns>
-        public double GetSemiPerimetr()
-        {
-            if (SideA == 0 || SideB == 0 || SideC == 0)
-            {
-                throw new ArgumentException("Треугольник не инициализирован значениями");
-            }
-            return (SideA + SideB + SideC) / 2;
-        }
     }
 }
