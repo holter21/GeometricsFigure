@@ -169,36 +169,45 @@ namespace GeometricsFigure
         /// Получение площади трапеции.
         /// </summary>
         /// <returns>Площадь трапеции.</returns>
-        public double GetArea()
+        public double Area
         {
-            if (SideA == 0 || SideB==0 || SideC==0 || SideD==0 || Height==0)
+            get
             {
-                throw new ArgumentException("Трапеция не инициализирована значениями");
+                if (SideA == 0 || SideB == 0 || SideC == 0 || SideD == 0 || Height == 0)
+                {
+                    throw new ArgumentException("Трапеция не инициализирована значениями");
+                }
+                return ((SideA + SideB) / 2) * Height;
             }
-            return ((SideA + SideB) / 2) * Height;
-        }
+        }  
 
         /// <summary>
         /// Получение периметра трапеции.
         /// </summary>
         /// <returns>Периметр трапеции.</returns>
-        public double GetPerimeter()
+        public double Perimeter
         {
-            if (SideA == 0 || SideB == 0 || SideC == 0 || SideD == 0 || Height == 0)
+            get
             {
-                throw new ArgumentException("Трапеция не инициализирована значениями");
+                if (SideA == 0 || SideB == 0 || SideC == 0 || SideD == 0 || Height == 0)
+                {
+                    throw new ArgumentException("Трапеция не инициализирована значениями");
+                }
+                return SideA + SideB + SideC + SideD;
             }
-            return SideA + SideB + SideC + SideD;
         }
 
         /// <summary>
         /// Получение типа фигуры
         /// </summary>
         /// <returns>Тип фигуры</returns>
-        public string GetType()
+        public string Type
         {
-            return "Трапеция";
-        }
+            get
+            {
+                return "Трапеция";
+            }
+        }     
 
         #endregion
     }

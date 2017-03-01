@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Dynamic;
 
 namespace GeometricsFigure
 {
@@ -16,18 +17,18 @@ namespace GeometricsFigure
         /// Получение площади фигуры.
         /// </summary>
         /// <returns>Площадь фигуры.</returns>
-        double GetArea();
+        double Area { get; }
 
         /// <summary>
         /// Получение периметра фигуры.
         /// </summary>
         /// <returns>Периметр фигуры.</returns>
-        double GetPerimeter();
+        double Perimeter { get; }
 
         /// <summary>
         /// Получение типа фигуры
         /// </summary>
         /// <returns>Тип фигуры</returns>
-        string GetType();
+        string Type { get; }
     }
 }

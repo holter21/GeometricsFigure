@@ -77,36 +77,45 @@ namespace GeometricsFigure
         /// Получение площади окружности.
         /// </summary>
         /// <returns>Площадь окружности.</returns>
-        public double GetArea()
+        public double Area
         {
-            if ( _radius == 0 )
+            get
             {
-                throw new ArgumentException("Окружность не инициализирована значениями");
+                if (_radius == 0)
+                {
+                    throw new ArgumentException("Окружность не инициализирована значениями");
+                }
+                return Math.PI * Radius * Radius;
             }
-            return Math.PI * Radius * Radius;
         }
 
         /// <summary>
         /// Получение периметра окружности.
         /// </summary>
         /// <returns>Периметр окружности.</returns>
-        public double GetPerimeter()
+        public double Perimeter
         {
-            if (_radius == 0)
+            get
             {
-                throw new ArgumentException("Окружность не инициализирована значениями");
+                if (_radius == 0)
+                {
+                    throw new ArgumentException("Окружность не инициализирована значениями");
+                }
+                return 2 * Math.PI * Radius;
             }
-            return 2 * Math.PI * Radius;
         }
 
         /// <summary>
         /// Получение типа фигуры
         /// </summary>
         /// <returns>Тип фигуры</returns>
-        public string GetType()
+        public string Type
         {
-            return "Окружность";
-        }
+            get
+            {
+                return "Окружность";
+            }
+        }    
 
         #endregion
     }

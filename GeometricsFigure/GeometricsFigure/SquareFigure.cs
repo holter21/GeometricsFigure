@@ -76,35 +76,36 @@ namespace GeometricsFigure
         /// Получение площади квадрата.
         /// </summary>
         /// <returns>Площадь квадрата.</returns>
-        public double GetArea()
+        public double Area
         {
-            if (SideA == 0)
+            get
             {
-                throw new ArgumentException("Квадрат не инициализирован значениями");
+                return SideA * SideA;
             }
-            return SideA * SideA;
         }
 
         /// <summary>
         /// Получение периметра квадрата.
         /// </summary>
         /// <returns>Периметр квадрата.</returns>
-        public double GetPerimeter()
+        public double Perimeter
         {
-            if (SideA == 0)
+            get
             {
-                throw new ArgumentException("Квадрат не инициализирован значениями");
+                return 4 * SideA;
             }
-            return 4 * SideA;
         }
 
         /// <summary>
         /// Получение типа фигуры
         /// </summary>
         /// <returns>Тип фигуры</returns>
-        public string GetType()
+        public string Type
         {
-            return "Квадрат";
+            get
+                {
+                    return "Квадрат";
+                }
         }
 
         #endregion

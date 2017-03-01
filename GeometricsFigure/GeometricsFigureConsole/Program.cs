@@ -33,12 +33,12 @@ namespace GeometricsFigureConsole
                 foreach (IFigure figure in geometricsFigure)
                 {
                     Console.WriteLine("{0}. Площадь = {1}. Периметр = {2}",
-                                      figure.GetType(),
-                                      figure.GetArea(),
-                                      figure.GetPerimeter());
+                                      figure.Type,
+                                      figure.Area,
+                                      figure.Perimeter);
                 }
             }
-
+            
             catch ( Exception exception )
             {
                 Console.WriteLine(exception.Message);

@@ -153,39 +153,48 @@ namespace GeometricsFigure
         /// Получение площади треугольника.
         /// </summary>
         /// <returns>Площадь треугольника.</returns>
-        public double GetArea()
+        public double Area
         {
-            if (SideA == 0 || SideB == 0 || SideC ==0)
+            get
             {
-                throw new ArgumentException("Треугольник не инициализирован значениями");
+                if (SideA == 0 || SideB == 0 || SideC == 0)
+                {
+                    throw new ArgumentException("Треугольник не инициализирован значениями");
+                }
+                var tmp = GetSemiPerimetr() * ((GetSemiPerimetr() - SideA)) * (GetSemiPerimetr() - SideB) * (GetSemiPerimetr() - SideC);
+                return
+                        Math.Sqrt(tmp);
             }
-            var tmp = GetSemiPerimetr() * ((GetSemiPerimetr() - SideA)) * (GetSemiPerimetr() - SideB) * (GetSemiPerimetr() - SideC);
-            return
-                    Math.Sqrt(tmp);
-        }
+        }   
 
         /// <summary>
         /// Получение периметра треугольника.
         /// </summary>
         /// <returns>Периметр треугольника.</returns>
-        public double GetPerimeter()
+        public double Perimeter
         {
-            if (SideA == 0 || SideB == 0 || SideC == 0)
+            get
             {
-                throw new ArgumentException("Треугольник не инициализирован значениями");
+                if (SideA == 0 || SideB == 0 || SideC == 0)
+                {
+                    throw new ArgumentException("Треугольник не инициализирован значениями");
+                }
+                return (SideA + SideB + SideC);
             }
-            return (SideA + SideB + SideC);
-        }
+        } 
 
         /// <summary>
         /// Получение типа фигуры
         /// </summary>
         /// <returns>Тип фигуры</returns>
-        public string GetType()
+        public string Type
         {
-            return "Треугольник";
+            get
+            {
+                return "Треугольник";
+            }
         }
-
+        
         #endregion
 
     }

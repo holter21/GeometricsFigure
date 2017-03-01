@@ -100,37 +100,46 @@ namespace GeometricsFigure
         /// Получение площади прямоугольника.
         /// </summary>
         /// <returns>Площадь прямоугольника.</returns>
-        public double GetArea()
+        public double Area
         {
-            if ( Height == 0 || Width == 0 )
+            get
             {
-                throw new ArgumentException("Прямоугольник не инициализирован значениями");
+                if (Height == 0 || Width == 0)
+                {
+                    throw new ArgumentException("Прямоугольник не инициализирован значениями");
+                }
+                return Height * Width;
             }
-            return Height * Width;
         }
 
         /// <summary>
         /// Получение периметра прямоугльника.
         /// </summary>
         /// <returns>Периметр прямоугольника.</returns>
-        public double GetPerimeter()
+        public double Perimeter
         {
-            if ( Height == 0 || Width == 0 )
+            get
             {
-                throw new ArgumentException("Прямоугольник не инициализирован значениями");
+                if ( Height == 0 || Width == 0 )
+                {
+                    throw new ArgumentException("Прямоугольник не инициализирован значениями");
+                }
+                return (Height + Width) * 2;
             }
-            return (Height + Width) * 2;
         }
 
         /// <summary>
         /// Получение типа фигуры
         /// </summary>
         /// <returns>Тип фигуры</returns>
-        public string GetType()
+        public string Type
         {
-            return "Прямоугольник";
+           get
+           {
+                return "Прямоугольник";
+           }
         }
-
+        
         #endregion
     }
 }
