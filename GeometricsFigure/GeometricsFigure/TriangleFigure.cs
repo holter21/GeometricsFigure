@@ -12,33 +12,25 @@ namespace GeometricsFigure
     /// </summary>
     public class TriangleFigure:IFigure
     {
-        private Point _startPoint;
         private double _sideA;
         private double _sideB;
         private double _sideC;
 
         /// <summary>
-        /// Конструктор треугольника.
+        /// Пустой конструктор треугольника.
         /// </summary>
         public TriangleFigure()
         {
-            _startPoint.X = 0;
-            _startPoint.Y = 0;
-            _sideA = 0;
-            _sideB = 0;
-            _sideC = 0;
         }
 
         /// <summary>
         /// Конструктор треугольника.
         /// </summary>
-        /// <param name="startPoint">Начальные координаты треугольника.</param>
         /// <param name="a">Сторона А</param>
         /// <param name="b">Сторона В</param>
         /// <param name="c">Сторона С</param>
-        public TriangleFigure(Point startPoint, double a, double b, double c)
+        public TriangleFigure(double a, double b, double c)
         {
-            StartPoint = startPoint;
             SetSides(a, b, c);
         }
 
@@ -133,21 +125,6 @@ namespace GeometricsFigure
         }
 
         #region Implementation of IFigure
-
-        /// <summary>
-        /// Начальные координаты треугольника.
-        /// </summary>
-        public Point StartPoint
-        {
-            get
-            {
-                return _startPoint;
-            }
-            set
-            {
-                _startPoint = value;
-            }
-        }
 
         /// <summary>
         /// Получение площади треугольника.

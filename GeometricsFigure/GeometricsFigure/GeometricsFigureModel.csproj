@@ -45,7 +45,6 @@
     <Compile Include="IFigure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RectangleFigure.cs" />
-    <Compile Include="SquareFigure.cs" />
     <Compile Include="TrapezeFigure.cs" />
     <Compile Include="TriangleFigure.cs" />
   </ItemGroup>

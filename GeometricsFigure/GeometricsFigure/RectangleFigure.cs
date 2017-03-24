@@ -13,29 +13,23 @@ namespace GeometricsFigure
     public class RectangleFigure:IFigure
 
     {
-        private Point _startPoint;
         private double _height;
         private double _width;
 
         /// <summary>
-        /// Конструктор прямоугольника.
+        /// Пустой конструктор треугольника.
         /// </summary>
         public RectangleFigure()
         {
-            _startPoint.X = 0;
-            _startPoint.Y = 0;
-            _height = 0;
-            _width = 0;
         }
+
         /// <summary>
         /// Конструктор прямоугольника.
         /// </summary>
-        /// <param name="startPoint">Начальные координаты.</param>
         /// <param name="height">Высота.</param>
         /// <param name="width">Ширина.</param>
-        public RectangleFigure(Point startPoint, double height, double width)
+        public RectangleFigure(double height, double width)
         {
-            StartPoint = startPoint;
             Height = height;
             Width = width;
         }
@@ -80,21 +74,6 @@ namespace GeometricsFigure
         }
 
         #region Implementation of IFigure
-
-        /// <summary>
-        /// Начальные координаты прямоугольника.
-        /// </summary>
-        public Point StartPoint
-        {
-            get
-            {
-                return _startPoint;
-            }
-            set
-            {
-                _startPoint = value;
-            }
-        }
 
         /// <summary>
         /// Получение площади прямоугольника.

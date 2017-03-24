@@ -12,27 +12,21 @@ namespace GeometricsFigure
     /// </summary>
     public class CircleFigure:IFigure
     {
-        private Point _startPoint;
         private double _radius;
 
         /// <summary>
-        /// Конструктор окружности.
+        /// Пустой конструктор окружности.
         /// </summary>
         public CircleFigure()
         {
-            _startPoint.X = 0;
-            _startPoint.Y = 0;
-            _radius = 0;
         }
 
         /// <summary>
         /// Конструктор окружности.
         /// </summary>
-        /// <param name="startPoint">Начальные координаты окружности.</param>
         /// <param name="radius">Радиус окружности.</param>
-        public CircleFigure(Point startPoint, double radius)
+        public CircleFigure(double radius)
         {
-            StartPoint = startPoint;
             Radius = radius;
         }
 
@@ -57,21 +51,6 @@ namespace GeometricsFigure
 
 
         #region Implementation of IFigure
-
-        /// <summary>
-        /// Начальные координаты окружности.
-        /// </summary>
-        public Point StartPoint
-        {
-            get
-            {
-                return _startPoint;
-            }
-            set
-            {
-                _startPoint = value;
-            }
-        }
 
         /// <summary>
         /// Получение площади окружности.

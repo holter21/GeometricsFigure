@@ -9,11 +9,6 @@ namespace GeometricsFigure
     public interface IFigure
     {
         /// <summary>
-        /// Начальные координаты фигуры.
-        /// </summary>
-        Point StartPoint { get; set; }
-
-        /// <summary>
         /// Получение площади фигуры.
         /// </summary>
         /// <returns>Площадь фигуры.</returns>

@@ -12,7 +12,6 @@ namespace GeometricsFigure
     /// </summary>
     public class TrapezeFigure:IFigure
     {
-        private Point _startPoint;
         private double _sideA;
         private double _sideB;
         private double _sideC;
@@ -20,31 +19,22 @@ namespace GeometricsFigure
         private double _height;
 
         /// <summary>
-        /// Конструктор трапеции.
+        /// Пустой конструктор трапеции.
         /// </summary>
         public TrapezeFigure()
         {
-            _startPoint.X = 0;
-            _startPoint.Y = 0;
-            _sideA = 0;
-            _sideB = 0;
-            _sideC = 0;
-            _sideD = 0;
-            _height = 0;
         }
 
         /// <summary>
         /// Конструктор трапеции.
         /// </summary>
-        /// <param name="startPoint">Начальные координаты трапеции.</param>
         /// <param name="a">Длина основания А трапеции.</param>
         /// <param name="b">Длина основания В трапеции.</param>
         /// <param name="c">Боковая сторона С трапеции.</param>
         /// <param name="d">Боковая сторона D трапеции.</param>
         /// <param name="h">Высота трапеции</param>
-        public TrapezeFigure(Point startPoint, double a, double b, double c, double d, double h)
+        public TrapezeFigure(double a, double b, double c, double d, double h)
         {
-            StartPoint = startPoint;
             SideA = a;
             SideB = b;
             SideC = c;
@@ -149,21 +139,6 @@ namespace GeometricsFigure
         }
 
         #region Implementation of IFigure
-
-        /// <summary>
-        /// Начальные координаты трапеции.
-        /// </summary>
-        public Point StartPoint
-        {
-            get
-            {
-                return _startPoint;
-            }
-            set
-            {
-                _startPoint = value;
-            }
-        }
 
         /// <summary>
         /// Получение площади трапеции.

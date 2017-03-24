@@ -15,19 +15,16 @@ namespace GeometricsFigureConsole
 
             try
             {
-                var rectangleFigure = new RectangleFigure(point, 3, 2);
+                var rectangleFigure = new RectangleFigure(3, 2);
                 geometricsFigure.Add(rectangleFigure);
 
-                var circleFigure = new CircleFigure(point, 3.5);
+                var circleFigure = new CircleFigure(3.5);
                 geometricsFigure.Add(circleFigure);
 
-                var triangleFigure = new TriangleFigure(point, 10, 10, 10);
+                var triangleFigure = new TriangleFigure(10, 10, 10);
                 geometricsFigure.Add(triangleFigure);
 
-                var squareFigure = new SquareFigure(point, 6);
-                geometricsFigure.Add(squareFigure);
-
-                var trapezeFigure = new TrapezeFigure(point, 5, 6, 3, 4, 2.5);
+                var trapezeFigure = new TrapezeFigure(5, 6, 3, 4, 2.5);
                 geometricsFigure.Add(trapezeFigure);
 
                 foreach (IFigure figure in geometricsFigure)
