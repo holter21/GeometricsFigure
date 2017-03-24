@@ -31,15 +31,14 @@ namespace GeometricsFigureView
                                     };
                     _figure = rectangle;
                 }
-                /*else if (FigureComboBox.SelectedIndex == 1)
+                else if (FigureComboBox.SelectedIndex == 1)
                 {
-                     var triangle = new TriangleFigure()
-                     {
-                         SideA = Convert.ToDouble(SideATextBox.Text),
-                         Width = Convert.ToDouble(SideBTextBox.Text)
-                     };
+                    var triangle = new TriangleFigure();
+                    triangle.SetSides(Convert.ToDouble(SideATextBox.Text),
+                                      Convert.ToDouble(SideBTextBox.Text),
+                                      Convert.ToDouble(SideCTextBox.Text));
                      _figure = triangle;
-                 }*/
+                 }
                  else if ( FigureComboBox.SelectedIndex == 2 )
                 {
                     var trapeze = new TrapezeFigure
@@ -74,14 +73,15 @@ namespace GeometricsFigureView
                     SideBTextBox.Text = rec.Width.ToString(CultureInfo.InvariantCulture);
                 }
 
-                /*else if (value is TriangleFigure)
+                else if (value is TriangleFigure)
                 {
-                    var rec = (RectangleFigure)value;
+                    var rec = (TriangleFigure)value;
                     FigureComboBox.SelectedIndex = 1;
                     FigureComboBox.Enabled = false;
-                    SideATextBox.Text = rec.Height.ToString(CultureInfo.InvariantCulture);
-                    SideBTextBox.Text = rec.Width.ToString(CultureInfo.InvariantCulture);
-                }*/
+                    SideATextBox.Text = rec.SideA.ToString(CultureInfo.InvariantCulture);
+                    SideBTextBox.Text = rec.SideB.ToString(CultureInfo.InvariantCulture);
+                    SideCTextBox.Text = rec.SideC.ToString(CultureInfo.InvariantCulture);
+                }
 
                 else if (value is TrapezeFigure)
                 {
@@ -129,7 +129,7 @@ namespace GeometricsFigureView
                 label7.Visible = false;
             }
 
-            /*else if (FigureComboBox.SelectedIndex == 1)
+            else if (FigureComboBox.SelectedIndex == 1)
             {
                 SideATextBox.Visible = true;
                 SideBTextBox.Visible = true;
@@ -143,7 +143,7 @@ namespace GeometricsFigureView
                 label5.Visible = false;
                 label6.Visible = false;
                 label7.Visible = false;
-            }*/
+            }
 
             else if (FigureComboBox.SelectedIndex == 2)
             {

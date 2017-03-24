@@ -85,20 +85,22 @@
             // 
             // RadiusTextBox
             // 
-            this.RadiusTextBox.Location = new System.Drawing.Point(135, 36);
+            this.RadiusTextBox.Location = new System.Drawing.Point(7, 36);
             this.RadiusTextBox.Name = "RadiusTextBox";
             this.RadiusTextBox.Size = new System.Drawing.Size(100, 20);
             this.RadiusTextBox.TabIndex = 11;
+            this.RadiusTextBox.Visible = false;
             this.RadiusTextBox.TextChanged += new System.EventHandler(this.RadiusTextBox_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(132, 20);
+            this.label7.Location = new System.Drawing.Point(6, 20);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 13);
             this.label7.TabIndex = 10;
             this.label7.Text = "Радиус";
+            this.label7.Visible = false;
             // 
             // HeightTextBox
             // 
@@ -106,6 +108,7 @@
             this.HeightTextBox.Name = "HeightTextBox";
             this.HeightTextBox.Size = new System.Drawing.Size(100, 20);
             this.HeightTextBox.TabIndex = 9;
+            this.HeightTextBox.Visible = false;
             // 
             // label6
             // 
@@ -115,6 +118,7 @@
             this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 8;
             this.label6.Text = "Высота";
+            this.label6.Visible = false;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // SideDTextBox
@@ -123,6 +127,7 @@
             this.SideDTextBox.Name = "SideDTextBox";
             this.SideDTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideDTextBox.TabIndex = 7;
+            this.SideDTextBox.Visible = false;
             this.SideDTextBox.TextChanged += new System.EventHandler(this.SideDTextBox_TextChanged);
             // 
             // label5
@@ -133,6 +138,7 @@
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Сторона D";
+            this.label5.Visible = false;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // SideCTextBox
@@ -141,6 +147,7 @@
             this.SideCTextBox.Name = "SideCTextBox";
             this.SideCTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideCTextBox.TabIndex = 5;
+            this.SideCTextBox.Visible = false;
             this.SideCTextBox.TextChanged += new System.EventHandler(this.SideCTextBox_TextChanged);
             // 
             // label4
@@ -151,6 +158,7 @@
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Сторона С";
+            this.label4.Visible = false;
             // 
             // SideBTextBox
             // 
@@ -158,6 +166,7 @@
             this.SideBTextBox.Name = "SideBTextBox";
             this.SideBTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideBTextBox.TabIndex = 3;
+            this.SideBTextBox.Visible = false;
             this.SideBTextBox.TextChanged += new System.EventHandler(this.SideBTextBox_TextChanged);
             // 
             // label3
@@ -168,6 +177,7 @@
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Сторона В";
+            this.label3.Visible = false;
             // 
             // label2
             // 
@@ -177,6 +187,7 @@
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Сторона А";
+            this.label2.Visible = false;
             // 
             // SideATextBox
             // 
@@ -184,6 +195,7 @@
             this.SideATextBox.Name = "SideATextBox";
             this.SideATextBox.Size = new System.Drawing.Size(101, 20);
             this.SideATextBox.TabIndex = 0;
+            this.SideATextBox.Visible = false;
             // 
             // ButtonCancel
             // 

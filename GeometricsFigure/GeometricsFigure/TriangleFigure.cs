@@ -37,57 +37,33 @@ namespace GeometricsFigure
         /// <summary>
         /// Сторона А
         /// </summary>
-        private double SideA
+        public double SideA
         {
             get
             {
                 return _sideA;
-            }
-            set
-            {
-                if ( value <= 0 )
-                {
-                    throw new ArgumentException("Некорректная сторона треугольника");
-                }
-                _sideA = value;
             }
         }
 
         /// <summary>
         /// Сторона В
         /// </summary>
-        private double SideB
+        public double SideB
         {
             get
             {
                 return _sideB;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Некорректная сторона треугольника");
-                }
-                _sideB = value;
             }
         }
 
         /// <summary>
         /// Сторона С
         /// </summary>
-        private double SideC
+        public double SideC
         {
             get
             {
                 return _sideC;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Некорректная сторона треугольника");
-                }
-                _sideC = value;
             }
         }
 
@@ -105,9 +81,9 @@ namespace GeometricsFigure
             }
             else
             {
-                SideA = a;
-                SideB = b;
-                SideC = c; 
+                _sideA = a;
+                _sideB = b;
+                _sideC = c; 
             }
         }
 
