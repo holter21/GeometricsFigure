@@ -49,5 +49,71 @@ namespace GeometricsFigureView
                 iFigureBindingSource.Insert(index, form.Figure);
             }
         }
+
+        private void RandomFigureButton_Click(object sender, EventArgs e)
+        {
+            iFigureBindingSource.Add(new RectangleFigure(10, 10));
+            iFigureBindingSource.Add(new TriangleFigure(15, 8, 8));
+            iFigureBindingSource.Add(new TrapezeFigure(10, 8, 6, 6, 4));
+            iFigureBindingSource.Add(new CircleFigure(5));
+        }
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog();
+            if ( !(ofd.FileName == null || ofd.ShowDialog() == DialogResult.Cancel) )
+            {
+                Figures = Serialization.Deserialize(ofd.FileName);
+                iFigureBindingSource.DataSource = Figures;
+            }
+        }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Figures.Count != 0)
+            {
+                var ofd = new SaveFileDialog
+                {
+                    Filter = @"dat files (*.dat)|*.dat",
+                    RestoreDirectory = true
+                };
+                if (!(ofd.FileName == null || ofd.ShowDialog() == DialogResult.Cancel))
+                {
+                    Serialization.Serialize(ofd.FileName, Figures);
+                }
+            }
+            else
+            {
+                MessageBox.Show(@"Ошибка. Файл не може быть пустым");
+            }
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            if (SearchTextBox.Text != "")
+            {
+                for (var i = 0; i < FigureDataGridView.RowCount; i++)
+                {
+                    FigureDataGridView.Rows[i].Selected = false;
+                    for (var j = 0; j < FigureDataGridView.ColumnCount; j++)
+                    {
+                        if (FigureDataGridView.Rows[i].Cells[j].Value == null)
+                        {
+                            continue;
+                        }
+                        if (!FigureDataGridView.Rows[i].Cells[j].Value.ToString().Contains(SearchTextBox.Text))
+                        {
+                            continue;
+                        }
+                        FigureDataGridView.Rows[i].Selected = true;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(@"Введите значение поиска");
+            }
+        }
     }
 }

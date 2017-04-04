@@ -10,6 +10,7 @@ namespace GeometricsFigure
     /// <summary>
     /// Класс прямоугольник.
     /// </summary>
+    [Serializable]
     public class RectangleFigure:IFigure
 
     {

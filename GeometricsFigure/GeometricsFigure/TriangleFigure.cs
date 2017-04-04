@@ -10,6 +10,7 @@ namespace GeometricsFigure
     /// <summary>
     /// Класс треугольник.
     /// </summary>
+    [Serializable]
     public class TriangleFigure:IFigure
     {
         private double _sideA;

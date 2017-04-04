@@ -59,7 +59,7 @@
             this.groupBox1.Controls.Add(this.FigureComboBox);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(267, 396);
+            this.groupBox1.Size = new System.Drawing.Size(220, 396);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -79,7 +79,7 @@
             this.groupBox2.Controls.Add(this.SideATextBox);
             this.groupBox2.Location = new System.Drawing.Point(6, 59);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(255, 281);
+            this.groupBox2.Size = new System.Drawing.Size(208, 281);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
@@ -200,7 +200,7 @@
             // ButtonCancel
             // 
             this.ButtonCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ButtonCancel.Location = new System.Drawing.Point(166, 352);
+            this.ButtonCancel.Location = new System.Drawing.Point(129, 352);
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.Size = new System.Drawing.Size(75, 23);
             this.ButtonCancel.TabIndex = 3;
@@ -211,7 +211,7 @@
             // ButtonOK
             // 
             this.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ButtonOK.Location = new System.Drawing.Point(23, 352);
+            this.ButtonOK.Location = new System.Drawing.Point(9, 352);
             this.ButtonOK.Name = "ButtonOK";
             this.ButtonOK.Size = new System.Drawing.Size(75, 23);
             this.ButtonOK.TabIndex = 2;
@@ -247,7 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 424);
+            this.ClientSize = new System.Drawing.Size(243, 424);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;

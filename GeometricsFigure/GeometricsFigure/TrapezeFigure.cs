@@ -10,6 +10,7 @@ namespace GeometricsFigure
     /// <summary>
     /// Класс трапеция.
     /// </summary>
+    [Serializable]
     public class TrapezeFigure:IFigure
     {
         private double _sideA;

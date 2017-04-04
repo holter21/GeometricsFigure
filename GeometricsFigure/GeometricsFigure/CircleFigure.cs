@@ -10,6 +10,7 @@ namespace GeometricsFigure
     /// <summary>
     /// Класс окружность.
     /// </summary>
+    [Serializable]
     public class CircleFigure:IFigure
     {
         private double _radius;
