@@ -178,36 +178,6 @@ namespace GeometricsFigureView
             }
         }
 
-        private void SideDTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SideBTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SideCTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadiusTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonOK_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;

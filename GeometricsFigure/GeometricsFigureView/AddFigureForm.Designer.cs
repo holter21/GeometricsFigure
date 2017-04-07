@@ -90,7 +90,6 @@
             this.RadiusTextBox.Size = new System.Drawing.Size(100, 20);
             this.RadiusTextBox.TabIndex = 11;
             this.RadiusTextBox.Visible = false;
-            this.RadiusTextBox.TextChanged += new System.EventHandler(this.RadiusTextBox_TextChanged);
             this.RadiusTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RadiusTextBox_KeyDown);
             // 
             // label7
@@ -120,7 +119,6 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Высота";
             this.label6.Visible = false;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // SideDTextBox
             // 
@@ -129,7 +127,6 @@
             this.SideDTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideDTextBox.TabIndex = 7;
             this.SideDTextBox.Visible = false;
-            this.SideDTextBox.TextChanged += new System.EventHandler(this.SideDTextBox_TextChanged);
             // 
             // label5
             // 
@@ -140,7 +137,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Сторона D";
             this.label5.Visible = false;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // SideCTextBox
             // 
@@ -149,7 +145,6 @@
             this.SideCTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideCTextBox.TabIndex = 5;
             this.SideCTextBox.Visible = false;
-            this.SideCTextBox.TextChanged += new System.EventHandler(this.SideCTextBox_TextChanged);
             // 
             // label4
             // 
@@ -168,7 +163,6 @@
             this.SideBTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideBTextBox.TabIndex = 3;
             this.SideBTextBox.Visible = false;
-            this.SideBTextBox.TextChanged += new System.EventHandler(this.SideBTextBox_TextChanged);
             // 
             // label3
             // 
