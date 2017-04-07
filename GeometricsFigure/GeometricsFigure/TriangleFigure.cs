@@ -117,7 +117,7 @@ namespace GeometricsFigure
                 }
                 var tmp = GetSemiPerimetr() * ((GetSemiPerimetr() - SideA)) * (GetSemiPerimetr() - SideB) * (GetSemiPerimetr() - SideC);
                 return
-                        Math.Sqrt(tmp);
+                        Math.Round(Math.Sqrt(tmp),2);
             }
         }   
 

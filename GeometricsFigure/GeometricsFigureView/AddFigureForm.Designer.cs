@@ -91,6 +91,7 @@
             this.RadiusTextBox.TabIndex = 11;
             this.RadiusTextBox.Visible = false;
             this.RadiusTextBox.TextChanged += new System.EventHandler(this.RadiusTextBox_TextChanged);
+            this.RadiusTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RadiusTextBox_KeyDown);
             // 
             // label7
             // 

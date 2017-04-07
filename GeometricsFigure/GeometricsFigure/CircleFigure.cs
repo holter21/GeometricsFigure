@@ -65,7 +65,7 @@ namespace GeometricsFigure
                 {
                     throw new ArgumentException("Окружность не инициализирована значениями");
                 }
-                return Math.PI * Radius * Radius;
+                return Math.Round((Math.PI * Radius * Radius), 2);
             }
         }
 
@@ -81,7 +81,7 @@ namespace GeometricsFigure
                 {
                     throw new ArgumentException("Окружность не инициализирована значениями");
                 }
-                return 2 * Math.PI * Radius;
+                return Math.Round((2 * Math.PI * Radius), 2);
             }
         }
 

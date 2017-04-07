@@ -219,5 +219,10 @@ namespace GeometricsFigureView
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void RadiusTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

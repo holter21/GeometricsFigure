@@ -76,14 +76,14 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -112,8 +112,10 @@
             this.FigureDataGridView.Location = new System.Drawing.Point(6, 19);
             this.FigureDataGridView.Name = "FigureDataGridView";
             this.FigureDataGridView.ReadOnly = true;
+            this.FigureDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FigureDataGridView.Size = new System.Drawing.Size(645, 385);
             this.FigureDataGridView.TabIndex = 1;
+            this.FigureDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FigureDataGridView_CellContentClick);
             // 
             // Type
             // 
