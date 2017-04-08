@@ -42,7 +42,7 @@ namespace GeometricsFigureView
             }
             else
             {
-                MessageBox.Show("Вы не выбрали строку, которую хотите удалить.", "Ошибка!");
+                MessageBox.Show(@"Вы не выбрали строку, которую хотите удалить.", @"Ошибка!");
             }
         }
 
@@ -50,7 +50,7 @@ namespace GeometricsFigureView
         {
             if ( iFigureBindingSource.Current == null )
             {
-                MessageBox.Show("Вы не выбрали строку, которую хотите изменить.", "Ошибка!");
+                MessageBox.Show(@"Вы не выбрали строку, которую хотите изменить.", @"Ошибка!");
             }
             else
             {
@@ -132,7 +132,7 @@ namespace GeometricsFigureView
             }
             else
             {
-                MessageBox.Show(@"Введите значение поиска");
+                MessageBox.Show(@"Введите значение поиска", @"Ошибка!");
             }
         }
 

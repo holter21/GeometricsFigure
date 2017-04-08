@@ -85,12 +85,13 @@
             // 
             // RadiusTextBox
             // 
-            this.RadiusTextBox.Location = new System.Drawing.Point(7, 36);
+            this.RadiusTextBox.Location = new System.Drawing.Point(3, 36);
             this.RadiusTextBox.Name = "RadiusTextBox";
             this.RadiusTextBox.Size = new System.Drawing.Size(100, 20);
             this.RadiusTextBox.TabIndex = 11;
             this.RadiusTextBox.Visible = false;
             this.RadiusTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RadiusTextBox_KeyDown);
+            this.RadiusTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RadiusTextBox_KeyPress);
             // 
             // label7
             // 
@@ -109,6 +110,7 @@
             this.HeightTextBox.Size = new System.Drawing.Size(100, 20);
             this.HeightTextBox.TabIndex = 9;
             this.HeightTextBox.Visible = false;
+            this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightTextBox_KeyPress);
             // 
             // label6
             // 
@@ -127,6 +129,7 @@
             this.SideDTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideDTextBox.TabIndex = 7;
             this.SideDTextBox.Visible = false;
+            this.SideDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SideDTextBox_KeyPress);
             // 
             // label5
             // 
@@ -145,6 +148,8 @@
             this.SideCTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideCTextBox.TabIndex = 5;
             this.SideCTextBox.Visible = false;
+            this.SideCTextBox.TextChanged += new System.EventHandler(this.SideCTextBox_TextChanged);
+            this.SideCTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SideCTextBox_KeyPress);
             // 
             // label4
             // 
@@ -163,6 +168,7 @@
             this.SideBTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideBTextBox.TabIndex = 3;
             this.SideBTextBox.Visible = false;
+            this.SideBTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SideBTextBox_KeyPress);
             // 
             // label3
             // 
@@ -186,11 +192,12 @@
             // 
             // SideATextBox
             // 
-            this.SideATextBox.Location = new System.Drawing.Point(6, 36);
+            this.SideATextBox.Location = new System.Drawing.Point(3, 36);
             this.SideATextBox.Name = "SideATextBox";
             this.SideATextBox.Size = new System.Drawing.Size(101, 20);
             this.SideATextBox.TabIndex = 0;
             this.SideATextBox.Visible = false;
+            this.SideATextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SideATextBox_KeyPress);
             // 
             // ButtonCancel
             // 

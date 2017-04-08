@@ -194,5 +194,58 @@ namespace GeometricsFigureView
         {
 
         }
+
+        private void RadiusTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SideATextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SideBTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SideCTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SideCTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SideDTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void HeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
