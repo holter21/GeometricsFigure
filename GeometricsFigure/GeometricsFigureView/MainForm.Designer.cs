@@ -124,7 +124,6 @@
             this.FigureDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FigureDataGridView.Size = new System.Drawing.Size(645, 385);
             this.FigureDataGridView.TabIndex = 1;
-            this.FigureDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FigureDataGridView_CellContentClick);
             // 
             // Type
             // 

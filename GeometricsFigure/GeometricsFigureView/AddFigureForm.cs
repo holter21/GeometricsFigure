@@ -219,11 +219,6 @@ namespace GeometricsFigureView
             }
         }
 
-        private void SideCTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void SideCTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')

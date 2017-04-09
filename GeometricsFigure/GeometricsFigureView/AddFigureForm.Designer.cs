@@ -148,7 +148,6 @@
             this.SideCTextBox.Size = new System.Drawing.Size(100, 20);
             this.SideCTextBox.TabIndex = 5;
             this.SideCTextBox.Visible = false;
-            this.SideCTextBox.TextChanged += new System.EventHandler(this.SideCTextBox_TextChanged);
             this.SideCTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SideCTextBox_KeyPress);
             // 
             // label4
