@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 using GeometricsFigure;
 
@@ -180,67 +181,110 @@ namespace GeometricsFigureView
 
         private void ButtonOK_Click(object sender, EventArgs e)
         {
+            if ( FigureComboBox.SelectedIndex == 0 )
+            {
+                if ( SideATextBox.TextLength == 0 || SideBTextBox.TextLength == 0 )
+                {
+                    MessageBox.Show(@"Вы ввели не все стороны прямоугольника.", @"Ошибка!");
+                    return;
+                }
+            }
+
+            else if ( FigureComboBox.SelectedIndex == 1 )
+            {
+                if ( SideATextBox.TextLength == 0 || SideBTextBox.TextLength == 0 || SideCTextBox.TextLength == 0 )
+                {
+                    MessageBox.Show(@"Вы ввели не все стороны треугольника.", @"Ошибка!");
+                    return;
+                }
+            }
+
+            else if ( FigureComboBox.SelectedIndex == 2 )
+            {
+                if ( SideATextBox.TextLength == 0 || SideBTextBox.TextLength == 0 || SideCTextBox.TextLength == 0
+                     || SideDTextBox.TextLength == 0 )
+                {
+                    MessageBox.Show(@"Вы ввели не все стороны трапеции.", @"Ошибка!");
+                    return;
+                }
+            }
+
+            else if ( FigureComboBox.SelectedIndex == 3 )
+            {
+                if ( RadiusTextBox.TextLength == 0 )
+                {
+                    MessageBox.Show(@"Вы не ввели радиус окружности.", @"Ошибка!");
+                    return;
+                }
+            }
+            else if ( FigureComboBox.SelectedIndex == -1 )
+            {
+                DialogResult = DialogResult.Cancel;
+                Close();
+                return;
+            }
+
             DialogResult = DialogResult.OK;
             Close();
         }
 
-        private void ButtonCancel_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            Close();
-        }
+            private void ButtonCancel_Click(object sender, EventArgs e)
+                {
+                    DialogResult = DialogResult.Cancel;
+                    Close();
+                }
 
-        private void RadiusTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
+                private void RadiusTextBox_KeyDown(object sender, KeyEventArgs e)
+                {
 
-        }
+                }
 
-        private void RadiusTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
-            {
-                e.Handled = true;
+                private void RadiusTextBox_KeyPress(object sender, KeyPressEventArgs e)
+                {
+                    if ( e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',' )
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+                private void SideATextBox_KeyPress(object sender, KeyPressEventArgs e)
+                {
+                    if ( e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',' )
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+                private void SideBTextBox_KeyPress(object sender, KeyPressEventArgs e)
+                {
+                    if ( e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',' )
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+                private void SideCTextBox_KeyPress(object sender, KeyPressEventArgs e)
+                {
+                    if ( e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',' )
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+                private void SideDTextBox_KeyPress(object sender, KeyPressEventArgs e)
+                {
+                    if ( e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',' )
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+                private void HeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
+                {
+                    if ( e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',' )
+                    {
+                        e.Handled = true;
+                    }
+                }
             }
         }
-
-        private void SideATextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void SideBTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void SideCTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void SideDTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void HeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != 8 && (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-    }
-}
