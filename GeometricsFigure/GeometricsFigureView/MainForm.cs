@@ -146,5 +146,10 @@ namespace GeometricsFigureView
             _figures = new List<IFigure>();
             iFigureBindingSource.DataSource = _figures;
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
