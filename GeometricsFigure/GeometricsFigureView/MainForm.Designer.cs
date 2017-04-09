@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.создатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,23 +68,31 @@
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.создатьToolStripMenuItem1,
             this.открытьToolStripMenuItem,
             this.сохранитьToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
+            // создатьToolStripMenuItem1
+            // 
+            this.создатьToolStripMenuItem1.Name = "создатьToolStripMenuItem1";
+            this.создатьToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.создатьToolStripMenuItem1.Text = "Создать";
+            this.создатьToolStripMenuItem1.Click += new System.EventHandler(this.CreateToolStripMenuItem1_Click);
+            // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -264,6 +273,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn perimeterDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Button SearchButton;
+        private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem1;
     }
 }
 

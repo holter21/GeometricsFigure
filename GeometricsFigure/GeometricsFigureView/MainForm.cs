@@ -48,7 +48,7 @@ namespace GeometricsFigureView
 
         private void ModifyFigureButton_Click(object sender, EventArgs e)
         {
-            if ( iFigureBindingSource.Current == null )
+            if ( iFigureBindingSource.Current == null)
             {
                 MessageBox.Show(@"Вы не выбрали строку, которую хотите изменить.", @"Ошибка!");
             }
@@ -139,6 +139,12 @@ namespace GeometricsFigureView
         private void FigureDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            
+        }
+
+        private void CreateToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            _figures = new List<IFigure>();
+            iFigureBindingSource.DataSource = _figures;
         }
     }
 }
