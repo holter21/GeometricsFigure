@@ -84,7 +84,7 @@ namespace GeometricsFigure
         {
             get
             {
-                if (Height == 0 || Width == 0)
+                if (Height <= 0 || Width <= 0)
                 {
                     throw new ArgumentException("Прямоугольник не инициализирован значениями");
                 }
@@ -100,7 +100,7 @@ namespace GeometricsFigure
         {
             get
             {
-                if ( Height == 0 || Width == 0 )
+                if ( Height <= 0 || Width <= 0 )
                 {
                     throw new ArgumentException("Прямоугольник не инициализирован значениями");
                 }

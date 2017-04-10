@@ -61,7 +61,7 @@ namespace GeometricsFigure
         {
             get
             {
-                if (_radius == 0)
+                if (_radius <= 0)
                 {
                     throw new ArgumentException("Окружность не инициализирована значениями");
                 }
@@ -77,7 +77,7 @@ namespace GeometricsFigure
         {
             get
             {
-                if (_radius == 0)
+                if (_radius <= 0)
                 {
                     throw new ArgumentException("Окружность не инициализирована значениями");
                 }

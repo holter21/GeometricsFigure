@@ -149,7 +149,7 @@ namespace GeometricsFigure
         {
             get
             {
-                if (SideA == 0 || SideB == 0 || SideC == 0 || SideD == 0 || Height == 0)
+                if (SideA <= 0 || SideB <= 0 || SideC <= 0 || SideD <= 0 || Height <= 0)
                 {
                     throw new ArgumentException("Трапеция не инициализирована значениями");
                 }
@@ -165,7 +165,7 @@ namespace GeometricsFigure
         {
             get
             {
-                if (SideA == 0 || SideB == 0 || SideC == 0 || SideD == 0 || Height == 0)
+                if (SideA <= 0 || SideB <= 0 || SideC <= 0 || SideD <= 0 || Height <= 0)
                 {
                     throw new ArgumentException("Трапеция не инициализирована значениями");
                 }

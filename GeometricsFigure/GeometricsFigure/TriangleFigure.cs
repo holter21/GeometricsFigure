@@ -94,7 +94,7 @@ namespace GeometricsFigure
         /// <returns>Полупериметр треугольника</returns>
         public double GetSemiPerimetr()
         {
-            if (SideA == 0 || SideB == 0 || SideC == 0)
+            if (SideA <= 0 || SideB <= 0 || SideC <= 0)
             {
                 throw new ArgumentException("Треугольник не инициализирован значениями");
             }
@@ -111,7 +111,7 @@ namespace GeometricsFigure
         {
             get
             {
-                if (SideA == 0 || SideB == 0 || SideC == 0)
+                if (SideA <= 0 || SideB <= 0 || SideC <= 0)
                 {
                     throw new ArgumentException("Треугольник не инициализирован значениями");
                 }
@@ -129,7 +129,7 @@ namespace GeometricsFigure
         {
             get
             {
-                if (SideA == 0 || SideB == 0 || SideC == 0)
+                if (SideA <= 0 || SideB <= 0 || SideC <= 0)
                 {
                     throw new ArgumentException("Треугольник не инициализирован значениями");
                 }

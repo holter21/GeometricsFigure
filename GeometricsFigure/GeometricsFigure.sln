@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricsFigureView", "Geo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricsFigureConsole", "GeometricsFigureConsole\GeometricsFigureConsole.csproj", "{78DE78F8-5982-49D2-A620-CC7D711D329F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{20B9CE0D-07E6-45D6-836E-81B0D04FE34A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{78DE78F8-5982-49D2-A620-CC7D711D329F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78DE78F8-5982-49D2-A620-CC7D711D329F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78DE78F8-5982-49D2-A620-CC7D711D329F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B9CE0D-07E6-45D6-836E-81B0D04FE34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B9CE0D-07E6-45D6-836E-81B0D04FE34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B9CE0D-07E6-45D6-836E-81B0D04FE34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B9CE0D-07E6-45D6-836E-81B0D04FE34A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
