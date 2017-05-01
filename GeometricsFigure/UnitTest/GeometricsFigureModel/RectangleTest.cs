@@ -11,7 +11,6 @@ namespace UnitTest.GeometricsFigureModel
         public void SideA(double a)
         {
             var rectangle = new RectangleFigure();
-            SideA(); = a;
         }
 
     }

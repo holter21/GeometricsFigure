@@ -36,11 +36,11 @@ namespace GeometricsFigure
         /// <param name="h">Высота трапеции</param>
         public TrapezeFigure(double a, double b, double c, double d, double h)
         {
-            SideA = a;
-            SideB = b;
-            SideC = c;
-            SideD = d;
-            Height = h;
+            SideA = CheckerValues.CheckValue(a); ;
+            SideB = CheckerValues.CheckValue(b); ;
+            SideC = CheckerValues.CheckValue(c); ;
+            SideD = CheckerValues.CheckValue(d); ;
+            Height = CheckerValues.CheckValue(h); ;
         }
 
         /// <summary>
@@ -54,11 +54,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if ( value <= 0 )
-                {
-                    throw new ArgumentException("Некорректная длина основания трапеции");
-                }
-                _sideA = value;
+                _sideA = CheckerValues.CheckValue(value);
             }
         }
 
@@ -73,11 +69,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Некорректная длина основания трапеции");
-                }
-                _sideB = value;
+                _sideB = CheckerValues.CheckValue(value);
             }
         }
 
@@ -92,11 +84,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Некорректная длина боковой стороны трапеции");
-                }
-                _sideC = value;
+                _sideC = CheckerValues.CheckValue(value);
             }
         }
 
@@ -111,11 +99,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Некорректная длина боковой стороны трапеции");
-                }
-                _sideD = value;
+                _sideD = CheckerValues.CheckValue(value);
             }
         }
 
@@ -131,11 +115,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Некорректная высота трапеции");
-                }
-                _height = value;
+                _height = CheckerValues.CheckValue(value);
             }
         }
 

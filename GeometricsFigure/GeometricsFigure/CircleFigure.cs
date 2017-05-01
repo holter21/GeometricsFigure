@@ -28,7 +28,7 @@ namespace GeometricsFigure
         /// <param name="radius">Радиус окружности.</param>
         public CircleFigure(double radius)
         {
-            Radius = radius;
+            Radius = CheckerValues.CheckValue(radius);
         }
 
         /// <summary>
@@ -42,11 +42,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if ( value <= 0 )
-                {
-                    throw new ArgumentException("Некорректный радиус окружности");
-                }
-                _radius = value;
+                _radius = CheckerValues.CheckValue(value);
             }
         }
 

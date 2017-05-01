@@ -31,8 +31,8 @@ namespace GeometricsFigure
         /// <param name="width">Ширина.</param>
         public RectangleFigure(double height, double width)
         {
-            Height = height;
-            Width = width;
+            Height = CheckerValues.CheckValue(height); ;
+            Width = CheckerValues.CheckValue(width); ;
         }
 
         /// <summary>
@@ -46,12 +46,8 @@ namespace GeometricsFigure
             }
             set
             {
-                if ( value <= 0 )
-                {
-                    throw new ArgumentException("Некорректная высота прямоугольника");
-                }
-                _height = value;
-                
+                _height = CheckerValues.CheckValue(value);
+
             }
         }
 
@@ -66,11 +62,7 @@ namespace GeometricsFigure
             }
             set
             {
-                if ( value <= 0 )
-                {
-                    throw new ArgumentException("Некорректная ширина прямоугольника");
-                }
-                _width = value;
+                _width = CheckerValues.CheckValue(value);
             }
         }
 

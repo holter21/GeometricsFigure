@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckerValueTest.cs" />
     <Compile Include="GeometricsFigureModel\CircleTest.cs" />
     <Compile Include="GeometricsFigureModel\RectangleTest.cs" />
     <Compile Include="GeometricsFigureModel\TrapezeTest.cs" />
