@@ -15,7 +15,7 @@ namespace UnitTest.GeometricsFigureModel
         [TestCase(-1, ExpectedException = (typeof(ArgumentException)), TestName = "Тестирование класса CircleFigure свойства Area при ошибочном значении, отрицательное значение")]
         [TestCase(2, ExpectedResult = 12.57, TestName = "Тестирование класса CircleFigure свойства Area при верном значении")]
 
-        public double AreaTest(double radius)
+        public double CircleAreaTest(double radius)
         {
             var circle = new CircleFigure(radius);
             return circle.Area;
@@ -28,7 +28,7 @@ namespace UnitTest.GeometricsFigureModel
         [TestCase(-1, ExpectedException = (typeof(ArgumentException)), TestName = "Тестирование класса CircleFigure свойства Perimeter при ошибочном значении, отрицательное значение")]
         [TestCase(2, ExpectedResult = 12.57, TestName = "Тестирование класса CircleFigure свойства Perimeter при верном значении")]
 
-        public double PerimeterTest(double radius)
+        public double CirclePerimeterTest(double radius)
         {
             var circle = new CircleFigure(radius);
             return circle.Perimeter;
