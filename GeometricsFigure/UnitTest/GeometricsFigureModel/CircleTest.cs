@@ -9,11 +9,11 @@ namespace UnitTest.GeometricsFigureModel
     public class CircleTest
     {
         [Test]
-        [TestCase(3,ExpectedResult = 28.27, TestName = "Тестирование свойства Area при значении радиуса = 3")]
-        [TestCase(-3, ExpectedException = (typeof(ArgumentException)),TestName = "Тестирование свойства Area при значении радиуса = -3")]
-        [TestCase(1, ExpectedResult = 3.14, TestName = "Тестирование свойства Area при значении радиуса = 1")]
-        [TestCase(-1, ExpectedException = (typeof(ArgumentException)), TestName = "Тестирование свойства Area при значении радиуса = -1")]
-        [TestCase(2, ExpectedResult = 12.57, TestName = "Тестирование свойства Area при значении радиуса = 2")]
+        [TestCase(3,ExpectedResult = 28.27, TestName = "Тестирование класса CircleFigure свойства Area при верном значении")]
+        [TestCase(-3, ExpectedException = (typeof(ArgumentException)),TestName = "Тестирование класса CircleFigure свойства Area при ошибочном значении, отрицательное значение")]
+        [TestCase(1, ExpectedResult = 3.14, TestName = "Тестирование класса CircleFigure свойства Area при верном значении")]
+        [TestCase(-1, ExpectedException = (typeof(ArgumentException)), TestName = "Тестирование класса CircleFigure свойства Area при ошибочном значении, отрицательное значение")]
+        [TestCase(2, ExpectedResult = 12.57, TestName = "Тестирование класса CircleFigure свойства Area при верном значении")]
 
         public double AreaTest(double radius)
         {
@@ -22,11 +22,11 @@ namespace UnitTest.GeometricsFigureModel
         }
 
         [Test]
-        [TestCase(3, ExpectedResult = 18.85, TestName = "Тестирование свойства Perimeter при значении радиуса = 3")]
-        [TestCase(-3, ExpectedException = (typeof(ArgumentException)), TestName = "Тестирование свойства Perimeter при значении радиуса = -3")]
-        [TestCase(1, ExpectedResult = 6.28, TestName = "Тестирование свойства Perimeter при значении радиуса = 1")]
-        [TestCase(-1, ExpectedException = (typeof(ArgumentException)), TestName = "Тестирование свойства Perimeter при значении радиуса = -1")]
-        [TestCase(2, ExpectedResult = 12.57, TestName = "Тестирование свойства Perimeter при значении радиуса = 2")]
+        [TestCase(3, ExpectedResult = 18.85, TestName = "Тестирование класса CircleFigure свойства Perimeter при верном значении")]
+        [TestCase(-3, ExpectedException = (typeof(ArgumentException)), TestName = "Тестирование класса CircleFigure свойства Perimeter при ошибочном значении, отрицательное значение")]
+        [TestCase(1, ExpectedResult = 6.28, TestName = "Тестирование класса CircleFigure свойства Perimeter при верном значении")]
+        [TestCase(-1, ExpectedException = (typeof(ArgumentException)), TestName = "Тестирование класса CircleFigure свойства Perimeter при ошибочном значении, отрицательное значение")]
+        [TestCase(2, ExpectedResult = 12.57, TestName = "Тестирование класса CircleFigure свойства Perimeter при верном значении")]
 
         public double PerimeterTest(double radius)
         {
