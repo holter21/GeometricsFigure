@@ -103,7 +103,6 @@ namespace GeometricsFigure
             }
         }
 
-        //TODO: Это поле можно вычислить 
         /// <summary>
         /// Высота трапеции.
         /// </summary>
