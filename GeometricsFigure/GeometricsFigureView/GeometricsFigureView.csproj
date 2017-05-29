@@ -54,6 +54,36 @@
     <Compile Include="AddFigureForm.Designer.cs">
       <DependentUpon>AddFigureForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CircleFigureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CircleFigureControl.Designer.cs">
+      <DependentUpon>CircleFigureControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FigureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FigureControl.Designer.cs">
+      <DependentUpon>FigureControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RectangleFigureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RectangleFigureControl.Designer.cs">
+      <DependentUpon>RectangleFigureControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrapezeFigureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TrapezeFigureControl.Designer.cs">
+      <DependentUpon>TrapezeFigureControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TriangleFigureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TriangleFigureControl.Designer.cs">
+      <DependentUpon>TriangleFigureControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +95,21 @@
     <Compile Include="Serialization.cs" />
     <EmbeddedResource Include="AddFigureForm.resx">
       <DependentUpon>AddFigureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CircleFigureControl.resx">
+      <DependentUpon>CircleFigureControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FigureControl.resx">
+      <DependentUpon>FigureControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RectangleFigureControl.resx">
+      <DependentUpon>RectangleFigureControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrapezeFigureControl.resx">
+      <DependentUpon>TrapezeFigureControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TriangleFigureControl.resx">
+      <DependentUpon>TriangleFigureControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

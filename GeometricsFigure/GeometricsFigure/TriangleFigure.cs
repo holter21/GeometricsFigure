@@ -76,13 +76,13 @@ namespace GeometricsFigure
         /// <param name="c">Сторона С</param>
         public void SetSides(double a, double b, double c)
         {
-            if ((a + c) <= b || (b + c) <= a || (a + b) <= c)
+            if ((a + c) < b || (b + c) < a || (a + b) < c)
             {
-                throw new ArgumentException("Неверно введены стороны треугольника");
+                throw new FormatException("Неверно введены стороны треугольника");
             }
             else if (a <=0 || b <=0 || c <= 0)
             {
-                throw new ArgumentException("Стороны треугольника не могут быть отрицательными или равными нулю"); 
+                throw new FormatException("Стороны треугольника не могут быть отрицательными или равными нулю"); 
             }
             else
             {
