@@ -19,11 +19,14 @@ namespace GeometricsFigureView
         /// </summary>
         private List<IFigure> _figures;
 
+        private Dictionary<string, double> figureDictionary;
+
         public MainForm()
         {
             InitializeComponent();
             _figures = new List<IFigure>();
             iFigureBindingSource.DataSource = _figures;
+            figureDictionary = new Dictionary<string, double>();
         }
 
         private void AddFigureButton_Click(object sender, EventArgs e)
@@ -32,6 +35,7 @@ namespace GeometricsFigureView
             if ( form.ShowDialog() == DialogResult.OK )
             {
                 iFigureBindingSource.Add(form.Figure);
+                figureDictionary.Add(form.Figure.Type,form.Figure.Perimeter);
             }
         }
 
@@ -42,6 +46,7 @@ namespace GeometricsFigureView
                 foreach (DataGridViewRow r in FigureDataGridView.SelectedRows)
                 {
                     iFigureBindingSource.RemoveAt(r.Index);
+                    figureDictionary.Clear();
                 }
             }
             else
@@ -77,7 +82,7 @@ namespace GeometricsFigureView
             iFigureBindingSource.Add(new RectangleFigure(rnd.Next(1,30), rnd.Next(1,30)));
             int a = rnd.Next(1, 20);
             int b = rnd.Next(1, 20);
-            int c = rnd.Next(a + b, a + b);
+            int c = rnd.Next(1, a + b);
             iFigureBindingSource.Add(new TriangleFigure(a, b, c));
             iFigureBindingSource.Add(new TrapezeFigure(rnd.Next(1, 20), rnd.Next(1, 20), rnd.Next(1, 20), rnd.Next(1, 20), rnd.Next(1, 10)));
             iFigureBindingSource.Add(new CircleFigure(rnd.Next(1, 10)));
