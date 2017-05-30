@@ -74,6 +74,7 @@
             this.MinimizeBox = false;
             this.Name = "AddFigureForm";
             this.Text = "Добавить фигуру";
+            this.Load += new System.EventHandler(this.AddFigureForm_Load);
             this.ResumeLayout(false);
 
         }

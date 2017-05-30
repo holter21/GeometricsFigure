@@ -152,9 +152,40 @@ namespace GeometricsFigureView
             iFigureBindingSource.DataSource = _figures;
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_figures.Count != 0)
+            {
+                var dialogResult = MessageBox.Show(@"Сохранить изменения?", @"Предупреждение",
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Asterisk);
+                switch (dialogResult)
+                {
+                    case DialogResult.Yes:
+                        {
+                            var ofd = new SaveFileDialog
+                            {
+                                Filter = @"dat files (*.dat)|*.dat",
+                                RestoreDirectory = true
+                            };
+                            if (!(ofd.FileName == null || ofd.ShowDialog() == DialogResult.Cancel))
+                            {
+                                Serialization.Serialize(ofd.FileName, _figures);
+                            }
+                            break;
+                        }
+                    case DialogResult.Cancel:
+                        {
+                            e.Cancel = true;
+                            break;
+                        }
+                }
+            }
         }
     }
 }

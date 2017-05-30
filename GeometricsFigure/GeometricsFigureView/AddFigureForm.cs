@@ -68,5 +68,10 @@ namespace GeometricsFigureView
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void AddFigureForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
